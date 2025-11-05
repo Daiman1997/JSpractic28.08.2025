@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+      to bottom,
+      rgb(99, 0, 17) 0%,
+      rgb(179, 37, 37) 25%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.8) 75%,
+      rgb(0, 0, 0, 1) 100%
+    )
+    no-repeat center center fixed;
+}
+
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.3em;
+}
+
+.back:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(45, 101, 221);
+}

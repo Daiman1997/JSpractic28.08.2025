@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+      to bottom,
+      rgb(99, 0, 17) 0%,
+      rgb(179, 37, 37) 25%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.8) 75%,
+      rgb(0, 0, 0, 1) 100%
+    )
+    no-repeat center center fixed;
+}
+
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.3em;
+}
+
+.back:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(45, 101, 221);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  height: 100vh;
+  flex-direction: column;
+  gap: 7vw;
+}
+
+.main__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10vw;
+}
+
+.main__text {
+  color: rgb(45, 101, 221);
+  font-size: clamp(10px, 2vw, 35px);
+  font-weight: bold;
+}
+
+.main__search {
+  top: 8vw;
+  position: absolute;
+  display: flex;
+  padding: 15px 0px 15px 20px;
+  width: 40vw;
+  border-radius: 5px;
+  font-size: clamp(5px, 1vw, 15px);
+  transition: all 0.3s ease;
+  outline: 3px solid dodgerblue;
+  outline-offset: 0px;
+}
+
+.main__search:focus::placeholder {
+  transition: all 0.3s ease;
+  color: rgb(158, 189, 255);
+}
+
+.main__search:focus {
+  color: white;
+  background-color: rgb(158, 189, 255);
+  border: none;
+  box-shadow: 0 0 0 10px rgb(158, 189, 255);
+  outline-offset: 10px;
+  font-size: clamp(6px, 1.3vw, 20px);
+  padding: 10px 0px 10px 20px;
+}
+
+.main__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: clamp(10px, 2vw, 35px);
+  font-weight: bold;
+  color: black;
+  list-style: none;
+  border-top: 5px solid rgb(45, 101, 221);
+  padding-top: 30px;
+  width: 100%;
+  align-items: center;
+}
+
+.list__user {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(158, 189, 255);
+  width: 40vw;
+  border-radius: 5px;
+  border: 3px solid rgb(45, 101, 221);
+  padding: 15px 20px 15px 20px;
+  gap: 10px;
+}
+
+.list__user-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__user-top::before {
+  content: "👤 ";
+}
+
+.list__user-bottom {
+  display: none;
+  flex-direction: column;
+  background-color: rgb(158, 189, 255);
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid rgb(45, 101, 221);
+  padding: 15px 20px 15px 20px;
+  font-size: clamp(10px, 2vw, 20px);
+  font-weight: 500;
+  list-style: none;
+}
+
+.list__user-bottom li::before {
+  content: "➤ ";
+}
+
+.arrow {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  color: rgb(45, 101, 221);
+}
+
+.loading__spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc; /* светлая часть */
+  border-top-color: #1d72b8; /* цвет "вращающейся" части */
+  border-radius: 50%; /* круг */
+  animation: spin 1s linear infinite; /* анимация */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
