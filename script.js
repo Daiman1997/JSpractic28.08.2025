@@ -9,5 +9,5 @@ function randomColor() {
     circle.style.backgroundColor = color;
   })
 }
-
+randomColor();
 setInterval(randomColor, 1000)

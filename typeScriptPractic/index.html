@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practic TS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="/typeScriptPractic/dist/index.js" defer></script>
-</head>
-<body>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <!-- Prism для подсветки -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+
+    <!-- Подключаем TypeScript компилятор как обычный скрипт (не через fetch+eval) -->
+    <script src="https://unpkg.com/typescript@4.9.5/lib/typescript.js"></script>
+  </head>
+  <body>
     <a class="back" href="/index.html">Назад</a>
-</body>
+    
+      <div class="pane">
+        <h2>TypeScript код</h2>
+        <pre><code id="ts-code" class="language-typescript">// Загружаем script.ts...</code></pre>
+        <div id="info" style="margin-top: 8px; color: #aaa"></div>
+      </div>
+
+      <div class="pane">
+        <h2>Console Output</h2>
+        <pre id="console-output">(ожидание...)</pre>
+        <div id="net-info" style="margin-top: 8px; color: #aaa"></div>
+      </div>
+    
+
+     <script src="settings.js"></script>
+  </body>
 </html>
